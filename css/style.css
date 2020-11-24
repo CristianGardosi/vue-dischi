@@ -32,6 +32,40 @@ img {
     max-height: 70px;
 }
 
+.cds-container .cd-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 50px;
+}
+
+.cds-container .cd-list .cd {
+    flex-basis: 200px;
+    padding: 20px;
+    margin: 10px 20px;
+    text-align: center;
+    background: -webkit-linear-gradient(to right, #434343, #000000); 
+    background: linear-gradient(to right, #434343, #000000); 
+    color: #fff;
+}
+/* Questa operazione mi permette di rendere il contenitore delle cover uguale perchè avendo img con asset diversi mi sballerebbe le info sottostanti, cosi conservo maggiore coerenza */
+.cds-container .cd-list .cd .image-container {
+    min-height: 170px;
+}
+
+.info-container .author, 
+.info-container .title,
+.info-container .genre,
+.info-container .year {
+    padding: 5px;
+}
+
+.info-container .author, 
+.info-container .title {
+    color: #1db954;
+}
+
 .loader {
     margin-top: 50px;
     display: flex;

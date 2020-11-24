@@ -31,19 +31,24 @@
         <div class="cds-container">
             <ul v-if="cds.length > 0" class="cd-list">
                 <!-- Looppo sull'array da me popolato con i dati API che contiene ora i miei cd e le informazioni da essi collegate -->
-                <li v-for="cd in cds">
+                <li v-for="cd in cds" class="cd">
                     <div class="image-container">
                         <!-- Per gestire dinamicamente le immagini relative ai cd bindo la selezione src al poster relativo al singolo cd e la stessa cosa faccio per il title, non utilizzo la sintassi mustache perchè mi trovo all'interno di un attributo! -->
                         <img v-bind:src="cd.poster" v-bind:alt="cd.title">
+                    </div>
+                    <div class="info-container">
                         <!-- Allo stesso modo agisco sulle altre info relative ai singoli album, questa volta utilizzando la mustache sintax -->
-                        <div class="author"> 
-                            <h3>{{ cd.author }}</h3>
+                        <div class="title"> 
+                            <h3>{{ cd.title }}</h3>
                         </div>
                         <div class="genre"> 
-                            <h4>{{ cd.genre }}</h4>
+                            <h5>{{ cd.genre }}</h5>
                         </div>
                         <div class="year"> 
                             {{ cd.year }}
+                        </div>
+                        <div class="author"> 
+                            <h4>{{ cd.author }}</h4>
                         </div>
                     </div>
                 </li>
