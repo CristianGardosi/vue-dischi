@@ -29,6 +29,19 @@
         </header>
         <!-- Cd main area -->
         <div class="cds-container">
+            <!-- Area selezione w/ select e options in base al genere -->
+            <div class="genre-filter">
+                <h2>Filter your music by genre!</h2>
+                <!-- Bindo la mia select al data actualGenre che di default parte su All e poi ad ogni richiesta dell'utente si aggiorna di conseguenza. Dopodichè associo l'evento che fa cambiare effettivamente il genere e la funz ad essa associata e definita nei methods ovvero il click di change dell'utente su un adelle option (per le select non si usa il semplice @click bensi' @change che si riferisce proprio all'effettivo cambiamento avvenuto) -->
+                <select v-model="actualGenre"
+                @change="filterGenre">
+                    <option value="all">All</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="metal">Metal</option>
+                    <option value="jazz">Jazz</option>
+                </select>
+            </div>
             <ul v-if="cds.length > 0" class="cd-list">
                 <!-- Looppo sull'array da me popolato con i dati API che contiene ora i miei cd e le informazioni da essi collegate -->
                 <li v-for="cd in cds" class="cd">

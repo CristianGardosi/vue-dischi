@@ -14,10 +14,6 @@ img {
 }
 
 /* Layout */
-#spoty-api {
-
-}
-
 .spoty-header {
     display: flex;
     justify-content: space-between;
@@ -32,6 +28,23 @@ img {
     max-height: 70px;
 }
 
+.genre-filter  {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.genre-filter h2 {
+    font-family: 'Lobster', cursive;
+    margin-right: 10px;
+}
+
+.genre-filter select {
+    color: #212121;
+    padding-right: 5px;
+    font-size: 16px;
+}
+
 .cds-container .cd-list {
     display: flex;
     justify-content: center;
@@ -43,7 +56,7 @@ img {
 .cds-container .cd-list .cd {
     flex-basis: 200px;
     padding: 20px;
-    margin: 10px 20px;
+    margin: 10px 10px;
     text-align: center;
     background: -webkit-linear-gradient(to right, #434343, #000000); 
     background: linear-gradient(to right, #434343, #000000); 
