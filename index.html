@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">   
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!-- VUEJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <!-- CSS -->
@@ -27,9 +29,29 @@
         </header>
         <!-- Cd main area -->
         <div class="cds-container">
-            <ul>
-                
+            <ul v-if="cds.length > 0" class="cd-list">
+                <!-- Looppo sull'array da me popolato con i dati API che contiene ora i miei cd e le informazioni da essi collegate -->
+                <li v-for="cd in cds">
+                    <div class="image-container">
+                        <!-- Per gestire dinamicamente le immagini relative ai cd bindo la selezione src al poster relativo al singolo cd e la stessa cosa faccio per il title, non utilizzo la sintassi mustache perchè mi trovo all'interno di un attributo! -->
+                        <img v-bind:src="cd.poster" v-bind:alt="cd.title">
+                        <!-- Allo stesso modo agisco sulle altre info relative ai singoli album, questa volta utilizzando la mustache sintax -->
+                        <div class="author"> 
+                            <h3>{{ cd.author }}</h3>
+                        </div>
+                        <div class="genre"> 
+                            <h4>{{ cd.genre }}</h4>
+                        </div>
+                        <div class="year"> 
+                            {{ cd.year }}
+                        </div>
+                    </div>
+                </li>
             </ul>
+            <!-- Loading dei miei dati API, nell'attesa mostro una basica rotellina per dare un feedback visivo -->
+            <div v-else class="loader">
+                <i class="fas fa-spinner"></i>
+            </div>
         </div>
     </div>
 

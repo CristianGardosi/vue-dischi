@@ -25,11 +25,22 @@ img {
     padding: 20px;
     background: #212121;
     font-family: 'Lobster', cursive;
-    color: #fff;
+    color: #1db954;
 }
 
 .spoty-header img {
     max-height: 70px;
+}
+
+.loader {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.loader i {
+    font-size: 100px;
+    color: #212121;
 }
 
 
