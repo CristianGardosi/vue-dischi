@@ -25,13 +25,18 @@
         <!-- Header -->
         <header class="spoty-header">
             <img src="./img/logo.png" alt="Spoty logo">
-            <h1>SpotyApi using VueJs</h1>
+            <h1> <i class="fab fa-vuejs"></i>  
+                SpotyApi using VueJs 
+                <i class="fab fa-vuejs"></i> 
+            </h1>
         </header>
         <!-- Cd main area -->
         <div class="cds-container">
             <!-- Area selezione w/ select e options in base al genere -->
             <div class="genre-filter">
-                <h2>Filter your music by genre!</h2>
+                <h2>Filter your music by genre!
+                    <i class="fas fa-headphones"></i>
+                </h2>
                 <!-- Bindo la mia select al data actualGenre che di default parte su All e poi ad ogni richiesta dell'utente si aggiorna di conseguenza. Dopodichè associo l'evento che fa cambiare effettivamente il genere e la funz ad essa associata e definita nei methods ovvero il click di change dell'utente su un adelle option (per le select non si usa il semplice @click bensi' @change che si riferisce proprio all'effettivo cambiamento avvenuto) -->
                 <select v-model="actualGenre"
                 @change="filterGenre">
