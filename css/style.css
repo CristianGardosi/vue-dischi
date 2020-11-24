@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1db954;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Layout */
+#spoty-api {
+
+}
+
+.spoty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #212121;
+    font-family: 'Lobster', cursive;
+    color: #fff;
+}
+
+.spoty-header img {
+    max-height: 70px;
+}
+
+
+
+
+
+
